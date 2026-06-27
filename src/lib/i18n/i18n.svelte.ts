@@ -18,8 +18,12 @@ function readStoredLang(): string {
 
 function detectBrowserLang(): string {
   if (typeof navigator === "undefined") return "en";
-  const lang = navigator.language?.split("-")[0];
-  if (lang === "pt") return "pt-BR";
+  const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const l of langs) {
+    const base = l.split("-")[0].toLowerCase();
+    if (base === "pt") return "pt-BR";
+    if (base === "en") return "en";
+  }
   return "en";
 }
 
