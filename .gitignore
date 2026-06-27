@@ -1,0 +1,7 @@
+target/
+.env
+*.env.local
+.sqlx/
+node_modules/
+.svelte-kit/
+build/
