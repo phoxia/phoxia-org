@@ -9,15 +9,7 @@ const translations: Record<string, LocaleShape> = {
   "pt-BR": ptBR,
 };
 
-function readStoredLang(): string {
-  if (typeof localStorage === "undefined") return "";
-  const stored = localStorage.getItem(LANG_KEY);
-  if (stored && translations[stored]) return stored;
-  return "";
-}
-
 function detectBrowserLang(): string {
-  if (typeof navigator === "undefined") return "en";
   const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
   for (const l of langs) {
     const base = l.split("-")[0].toLowerCase();
@@ -27,12 +19,17 @@ function detectBrowserLang(): string {
   return "en";
 }
 
-function initLang(): string {
-  if (typeof window === "undefined") return "en";
-  return readStoredLang() || detectBrowserLang();
-}
+// "en" is the safe SSR default; initClientLang() corrects it on the client
+let _lang = $state("en");
 
-let _lang = $state(initLang());
+export function initClientLang() {
+  const stored = localStorage.getItem(LANG_KEY);
+  if (stored && translations[stored]) {
+    _lang = stored;
+  } else {
+    _lang = detectBrowserLang();
+  }
+}
 
 export function getLang(): string {
   return _lang;
