@@ -1,9 +1,16 @@
 import tailwindcss from "@tailwindcss/vite";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
+import { svelteSitemap } from 'svelte-sitemap/vite';
 
 export default defineConfig({
-  plugins: [tailwindcss(), sveltekit()],
+  plugins: [
+    tailwindcss(),
+    sveltekit(),
+    svelteSitemap({
+			domain: 'https://phoxia.org',
+		})
+  ],
   server: {
     port: 5173,
   },
