@@ -11,6 +11,8 @@ const routes = [
   { path: "transparency", priority: "0.9" },
 ];
 
+export const prerender = true;
+
 export const GET: RequestHandler = () => {
   const urls = routes
     .map(
