@@ -21,6 +21,15 @@
     property="og:description"
     content="Every dollar that flows through Phoxia has a public justification. No hidden ledger."
   />
+  <meta property="og:url" content="https://phoxia.org/transparency" />
+  <meta property="og:image" content="https://phoxia.org/brand/og.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • Transparency" />
+  <meta
+    name="twitter:description"
+    content="Every dollar that flows through Phoxia has a public justification. No hidden ledger."
+  />
+  <link rel="canonical" href="https://phoxia.org/transparency" />
 </svelte:head>
 
 <Nav />
@@ -58,7 +67,7 @@
       <p class="coming-soon">{locale.transparencyPage.revenueComingSoon}</p>
 
       <div class="categories-grid">
-        {#each categories as cat}
+        {#each categories as cat (cat.label)}
           <div class="category-card">
             <p class="cat-label">{cat.label}</p>
             <p class="cat-amount" aria-label="Amount pending">—</p>
@@ -80,7 +89,7 @@
           locale.transparencyPage.principle1,
           locale.transparencyPage.principle2,
           locale.transparencyPage.principle3,
-        ] as p}
+        ] as p, i (i)}
           <li class="commitment-item">{p}</li>
         {/each}
       </ul>

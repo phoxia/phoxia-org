@@ -79,7 +79,7 @@
     <nav class="legal-sidebar" aria-label="Table of contents">
       <span class="legal-toc-label">{tocLabel}</span>
       <ul class="legal-toc" role="list">
-        {#each sections as section}
+        {#each sections as section (section.id)}
           <li>
             <button
               class="legal-toc-item"
@@ -95,7 +95,7 @@
 
     <!-- Content -->
     <main class="legal-content" id="main-content">
-      {#each sections as section, i}
+      {#each sections as section, i (section.id)}
         <section
           id={section.id}
           class="legal-section"

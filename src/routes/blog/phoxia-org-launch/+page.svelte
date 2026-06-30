@@ -35,6 +35,23 @@
       ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
       : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
   />
+  <meta property="og:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
+  <meta
+    property="og:description"
+    content={isPT
+      ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
+      : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
+  />
+  <meta property="og:url" content="https://phoxia.org/blog/phoxia-org-launch" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
+  <meta
+    name="twitter:description"
+    content={isPT
+      ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
+      : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
+  />
+  <link rel="canonical" href="https://phoxia.org/blog/phoxia-org-launch" />
 </svelte:head>
 
 <Nav />

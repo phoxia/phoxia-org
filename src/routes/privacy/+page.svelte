@@ -223,6 +223,19 @@
     name="description"
     content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
   />
+  <meta property="og:title" content="Phoxia • {locale.privacyPage.title}" />
+  <meta
+    property="og:description"
+    content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
+  />
+  <meta property="og:url" content="https://phoxia.org/privacy" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • {locale.privacyPage.title}" />
+  <meta
+    name="twitter:description"
+    content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
+  />
+  <link rel="canonical" href="https://phoxia.org/privacy" />
 </svelte:head>
 
 <LegalPage

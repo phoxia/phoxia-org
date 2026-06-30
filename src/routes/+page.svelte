@@ -74,6 +74,12 @@
   <meta property="og:url" content="https://phoxia.org" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Phoxia • Open source. Transparent. Community-first." />
+  <meta
+    name="twitter:description"
+    content="Every contribution to Phoxia helps fund developers, infrastructure, open source initiatives, and the long-term growth of the ecosystem. AGPLv3."
+  />
+  <link rel="canonical" href="https://phoxia.org" />
 </svelte:head>
 
 <Nav />
@@ -114,7 +120,7 @@
     <div class="section-inner">
       <h2 class="section-title">{locale.features.title}</h2>
       <div class="features-grid">
-        {#each features as feature}
+        {#each features as feature (feature.title)}
           <div class="feature-card">
             <span class="feature-icon" aria-hidden="true">
               <feature.icon size={22} strokeWidth={1.75} />
@@ -138,7 +144,7 @@
       </div>
 
       <div class="projects-grid">
-        {#each projects as project}
+        {#each projects as project (project.name)}
           <ProjectCard
             name={project.name}
             description={project.description}
@@ -167,7 +173,7 @@
       </div>
 
       <div class="principles-grid">
-        {#each principles as p}
+        {#each principles as p (p.title)}
           <div class="principle-card">
             <span class="principle-icon" aria-hidden="true">
               <p.icon size={20} strokeWidth={1.75} />

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Sun, Moon, Monitor, Languages } from "$lib/icons";
   import { t, cycleLang, getLang } from "$lib/i18n/i18n.svelte";
-  import { cycleMode, getModePref, getResolvedMode } from "$lib/theme/theme.svelte";
+  import { cycleMode, getModePref } from "$lib/theme/theme.svelte";
 
   let modePref = $state(getModePref());
-  let lang = $state(getLang());
+  let lang = $derived(getLang());
 
   function handleMode() {
     cycleMode();
@@ -13,7 +13,6 @@
 
   function handleLang() {
     cycleLang();
-    lang = getLang();
   }
 
   const ModeIcon = $derived(
@@ -21,7 +20,6 @@
   );
 
   let locale = $derived(t());
-  let resolvedMode = $derived(getResolvedMode());
   let modeLabel = $derived(
     modePref === "dark" ? locale.common.dark : modePref === "light" ? locale.common.light : locale.common.system
   );

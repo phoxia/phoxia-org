@@ -24,6 +24,19 @@ export default [
     },
   },
   {
+    // .svelte.ts files use TS syntax and Svelte 5 runes; svelte-check handles type-checking.
+    files: ["**/*.svelte.ts"],
+    languageOptions: {
+      parser: ts.parser,
+    },
+  },
+  {
     ignores: ["build/", ".svelte-kit/", "node_modules/"],
+  },
+  {
+    // Static site — all hrefs are plain strings; SvelteKit resolve() is not needed.
+    rules: {
+      "svelte/no-navigation-without-resolve": "off",
+    },
   },
 ];

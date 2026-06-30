@@ -42,6 +42,13 @@
 <svelte:head>
   <title>Phoxia • {locale.blog.title}</title>
   <meta name="description" content={locale.blog.subtitle} />
+  <meta property="og:title" content="Phoxia • {locale.blog.title}" />
+  <meta property="og:description" content={locale.blog.subtitle} />
+  <meta property="og:url" content="https://phoxia.org/blog" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • {locale.blog.title}" />
+  <meta name="twitter:description" content={locale.blog.subtitle} />
+  <link rel="canonical" href="https://phoxia.org/blog" />
 </svelte:head>
 
 <Nav />
@@ -57,7 +64,7 @@
 
   <section class="posts">
     <div class="posts-inner">
-      {#each posts as post}
+      {#each posts as post (post.slug)}
         <article class="post-card">
           <div class="post-meta">
             <time datetime={post.date} class="post-date">{displayDate(post.date)}</time>

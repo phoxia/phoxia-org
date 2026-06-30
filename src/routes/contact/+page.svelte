@@ -2,10 +2,9 @@
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
   import { Mail, ArrowUpRight } from "$lib/icons";
-  import { t, getLang } from "$lib/i18n/i18n.svelte";
+  import { t } from "$lib/i18n/i18n.svelte";
 
   let locale = $derived(t());
-  let lang = $derived(getLang());
 
   const DISCORD_INVITE = "https://discord.gg/HD2p367Zb5";
   const DISCORD_WIDGET_ID = "1520429987100889230";
@@ -27,17 +26,18 @@
       desc: locale.contactPage.emails.security.desc,
     },
   ]);
-
-  const widgetTheme = $derived(
-    typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "light"
-      ? "light"
-      : "dark"
-  );
 </script>
 
 <svelte:head>
   <title>Phoxia • {locale.contactPage.title}</title>
   <meta name="description" content={locale.contactPage.subtitle} />
+  <meta property="og:title" content="Phoxia • {locale.contactPage.title}" />
+  <meta property="og:description" content={locale.contactPage.subtitle} />
+  <meta property="og:url" content="https://phoxia.org/contact" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • {locale.contactPage.title}" />
+  <meta name="twitter:description" content={locale.contactPage.subtitle} />
+  <link rel="canonical" href="https://phoxia.org/contact" />
 </svelte:head>
 
 <Nav />
@@ -58,7 +58,7 @@
       <div class="block">
         <h2 class="block-title">{locale.contactPage.emailSection}</h2>
         <div class="email-list">
-          {#each emails as email}
+          {#each emails as email (email.address)}
             <a href="mailto:{email.address}" class="email-card">
               <div class="email-icon">
                 <Mail size={16} strokeWidth={1.75} />
@@ -85,10 +85,9 @@
               src="https://discord.com/widget?id={DISCORD_WIDGET_ID}&theme=dark"
               width="100%"
               height="400"
-              allowtransparency="true"
-              frameborder="0"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
               title="Phoxia Discord"
+              style="border:none;"
             ></iframe>
           </div>
           <a

@@ -238,6 +238,19 @@
     name="description"
     content="Terms of service for phoxia.org: acceptable use, intellectual property, AGPLv3 licensing, and governing law."
   />
+  <meta property="og:title" content="Phoxia • {locale.termsPage.title}" />
+  <meta
+    property="og:description"
+    content="Terms of service for phoxia.org: acceptable use, intellectual property, AGPLv3 licensing, and governing law."
+  />
+  <meta property="og:url" content="https://phoxia.org/terms" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • {locale.termsPage.title}" />
+  <meta
+    name="twitter:description"
+    content="Terms of service for phoxia.org: acceptable use, intellectual property, AGPLv3 licensing, and governing law."
+  />
+  <link rel="canonical" href="https://phoxia.org/terms" />
 </svelte:head>
 
 <LegalPage

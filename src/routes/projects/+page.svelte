@@ -106,6 +106,19 @@
     name="description"
     content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
   />
+  <meta property="og:title" content="Phoxia • All Projects" />
+  <meta
+    property="og:description"
+    content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
+  />
+  <meta property="og:url" content="https://phoxia.org/projects" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Phoxia • All Projects" />
+  <meta
+    name="twitter:description"
+    content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
+  />
+  <link rel="canonical" href="https://phoxia.org/projects" />
 </svelte:head>
 
 <Nav />
