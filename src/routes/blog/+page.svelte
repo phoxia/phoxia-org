@@ -17,6 +17,19 @@
 
   const posts: Post[] = [
     {
+      slug: "phoxia-tools-launch",
+      date: "2026-07-01",
+      minRead: 3,
+      title: {
+        en: "Phoxia Tools is live",
+        pt: "Phoxia Tools está no ar",
+      },
+      excerpt: {
+        en: "tools.phoxia.org is live. 19 tools that run entirely in your browser, no data sent anywhere.",
+        pt: "tools.phoxia.org está no ar. 19 ferramentas que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum.",
+      },
+    },
+    {
       slug: "phoxia-org-launch",
       date: "2026-06-27",
       minRead: 2,
