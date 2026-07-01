@@ -11,13 +11,10 @@
     <!-- ── TOP ── -->
     <div class="footer-top">
 
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="footer-logo" aria-label="Phoxia, home">
-          <img src="/brand/symbol.png" alt="" width="22" height="22" aria-hidden="true" />
-          <span>Phoxia</span>
-        </a>
-      </div>
+      <a href="/" class="footer-logo" aria-label="Phoxia, home">
+        <img src="/brand/symbol.png" alt="" width="22" height="22" aria-hidden="true" loading="lazy" />
+        <span>Phoxia</span>
+      </a>
 
       <!-- Links -->
       <nav class="footer-links" aria-label="Footer navigation">
@@ -76,8 +73,6 @@
   }
 
   .footer-inner {
-    max-width: 1120px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -88,17 +83,6 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-  }
-
-  .footer-brand {
-    flex: 0 0 65%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-  }
-
-  .footer-links {
-    flex: 1;
   }
 
   .footer-logo {
@@ -117,10 +101,11 @@
 
   /* Links — 2 col grid */
   .footer-links {
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: 1.25rem;
   }
 
   .footer-links a {
@@ -138,10 +123,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--color-border);
     gap: 1rem;
-    flex-wrap: wrap;
   }
 
   .footer-copy {
@@ -185,7 +169,7 @@
   .footer-external {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.75rem;
   }
 
   .external-link {
@@ -209,15 +193,12 @@
       gap: 1.25rem;
     }
 
-    .footer-brand {
-      flex: none;
-    }
 
     .footer-links {
+      flex: none;
       width: 100%;
       justify-content: center;
       gap: 1rem;
-      flex-wrap: wrap;
     }
 
     .footer-bottom {
