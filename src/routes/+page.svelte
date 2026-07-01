@@ -19,26 +19,28 @@
 
   let locale = $derived(t());
 
+  type ProjectStatus = "live" | "launching" | "building" | "upcoming";
+
   const projects = $derived([
     {
       name: locale.projects.tools.name,
       description: locale.projects.tools.desc,
       icon: Wrench,
-      status: "launching" as const,
-      href: "https://github.com/phoxia/phoxia-tools",
+      status: "live" as ProjectStatus,
+      href: "https://tools.phoxia.org",
     },
     {
       name: locale.projects.phoxiaid.name,
       description: locale.projects.phoxiaid.desc,
       icon: Fingerprint,
-      status: "building" as const,
+      status: "building" as ProjectStatus,
       href: "https://github.com/phoxia/phoxia-id",
     },
     {
       name: locale.projects.watch.name,
       description: locale.projects.watch.desc,
       icon: Activity,
-      status: "building" as const,
+      status: "building" as ProjectStatus,
       href: "https://github.com/phoxia/phoxia-watch",
     },
   ]);
@@ -63,12 +65,12 @@
   <title>Phoxia • Open source. Transparent. Community-first.</title>
   <meta
     name="description"
-    content="Phoxia is an open source ecosystem committed to returning as much value as possible to developers while maintaining a sustainable and transparent ecosystem. AGPLv3. No VC terms."
+    content="Phoxia is an open source ecosystem built to give open source maintainers more time for the projects the world depends on. AGPLv3. No VC terms."
   />
   <meta property="og:title" content="Phoxia • Open source. Transparent. Community-first." />
   <meta
     property="og:description"
-    content="Every contribution to Phoxia helps fund developers, infrastructure, open source initiatives, and the long-term growth of the ecosystem. AGPLv3."
+    content="Every contribution to Phoxia helps give open source maintainers more time for the projects the world depends on. AGPLv3."
   />
   <meta property="og:image" content="/brand/og.png" />
   <meta property="og:url" content="https://phoxia.org" />
@@ -77,7 +79,7 @@
   <meta name="twitter:title" content="Phoxia • Open source. Transparent. Community-first." />
   <meta
     name="twitter:description"
-    content="Every contribution to Phoxia helps fund developers, infrastructure, open source initiatives, and the long-term growth of the ecosystem. AGPLv3."
+    content="Every contribution to Phoxia helps give open source maintainers more time for the projects the world depends on. AGPLv3."
   />
   <link rel="canonical" href="https://phoxia.org" />
 </svelte:head>
@@ -151,11 +153,13 @@
             icon={project.icon}
             status={project.status}
             href={project.href}
-            statusLabel={project.status === "launching"
-              ? locale.projects.statusLaunching
-              : project.status === "building"
-                ? locale.projects.statusBuilding
-                : locale.projects.statusUpcoming}
+            statusLabel={project.status === "live"
+              ? locale.projects.statusLive
+              : project.status === "launching"
+                ? locale.projects.statusLaunching
+                : project.status === "building"
+                  ? locale.projects.statusBuilding
+                  : locale.projects.statusUpcoming}
           />
         {/each}
       </div>

@@ -2,7 +2,7 @@
   import type { IconComponent } from "$lib/icons";
   import { ArrowUpRight } from "$lib/icons";
 
-  type Status = "launching" | "building" | "upcoming";
+  type Status = "live" | "launching" | "building" | "upcoming";
 
   let {
     name,
@@ -93,6 +93,11 @@
     white-space: nowrap;
   }
 
+  .status-badge[data-status="live"] {
+    background: var(--status-live-bg);
+    color: var(--status-live-text);
+  }
+
   .status-badge[data-status="launching"] {
     background: var(--status-launching-bg);
     color: var(--status-launching-text);
@@ -109,6 +114,10 @@
   }
 
   /* Color indicator on the card border (status not just a badge) */
+  .project-card[data-status="live"] {
+    border-top: 2px solid var(--color-success);
+  }
+
   .project-card[data-status="launching"] {
     border-top: 2px solid var(--color-accent);
   }

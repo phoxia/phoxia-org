@@ -11,7 +11,7 @@ const ptBR: LocaleShape = {
     eyebrow: "Código aberto · AGPLv3 · Transparente",
     title: "Software pode ser justo.",
     subtitle:
-      "Phoxia é um ecossistema de código aberto comprometido em devolver o máximo de valor possível para os desenvolvedores, mantendo um ecossistema sustentável e transparente. Sem termos de VC. Sem extração.",
+      "Phoxia é um ecossistema de código aberto construído em torno de uma convicção: bom software morre quando seus mantenedores ficam sem tempo, não sem ideias. Cada ferramenta que construímos, cada real que geramos, existe para mudar isso. Sem termos de VC. Sem extração.",
     ctaPrimary: "Explorar projetos",
     ctaSecondary: "Nossos princípios",
     luxLabel: "Lux, o mascote da Phoxia",
@@ -20,7 +20,7 @@ const ptBR: LocaleShape = {
     title: "Construído diferente",
     fairRevenue: {
       title: "Desenvolvedores primeiro",
-      desc: "Cada decisão começa pelo impacto nos desenvolvedores. A Phoxia está comprometida em devolver o máximo de valor possível para a comunidade: via grants, bounties e programas feitos por devs, para devs.",
+      desc: "Cada decisão começa pelo impacto nos desenvolvedores. A aposta central: quando mantenedores têm mais tempo, o open source melhora para todo mundo. À medida que o ecossistema cresce, isso significa grants, bounties e programas feitos para quem o mantém vivo.",
     },
     transparency: {
       title: "Transparência por padrão",
@@ -34,6 +34,7 @@ const ptBR: LocaleShape = {
   projects: {
     title: "O ecossistema",
     subtitle: "Ferramentas independentes, princípios compartilhados.",
+    statusLive: "No ar",
     statusLaunching: "Lançando em breve",
     statusBuilding: "Em construção",
     statusUpcoming: "Em breve",
@@ -52,7 +53,7 @@ const ptBR: LocaleShape = {
     },
     tools: {
       name: "Tools",
-      desc: "45+ ferramentas gratuitas: diff de JSON, testador de regex, base64, UUID e muito mais. Zero anúncios, a menos que você queira.",
+      desc: "19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no navegador. JSON, JWT, hash, regex, cURL e mais. Nenhum dado sai da sua máquina.",
     },
     bounty: {
       name: "Bounty",
@@ -118,7 +119,7 @@ const ptBR: LocaleShape = {
     reportsEmpty: "Nenhum relatório publicado ainda.",
     principlesTitle: "Nosso compromisso",
     principle1:
-      "A Phoxia está comprometida em devolver o máximo de valor possível para os desenvolvedores, mantendo um ecossistema sustentável e transparente.",
+      "A Phoxia está comprometida em ajudar mantenedores open source a dedicar mais tempo aos projetos dos quais o mundo depende, mantendo o ecossistema sustentável e transparente.",
     principle2:
       "Todo real retido pela plataforma tem uma justificativa clara e pública listada acima.",
     principle3:

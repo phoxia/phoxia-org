@@ -29,7 +29,7 @@
     name: string;
     description: string;
     icon: IconComponent;
-    status: "launching" | "building" | "upcoming";
+    status: "live" | "launching" | "building" | "upcoming";
     href: string;
   };
 
@@ -48,8 +48,8 @@
       name: locale.projects.tools.name,
       description: locale.projects.tools.desc,
       icon: Wrench,
-      status: "launching",
-      href: "https://github.com/phoxia/phoxia-tools",
+      status: "live",
+      href: "https://tools.phoxia.org",
     },
     {
       kind: "revealed",
@@ -87,7 +87,7 @@
         ? allProjects.filter((p) => p.kind === "classified")
         : activeFilter === "building"
           ? allProjects.filter(
-              (p) => p.kind === "revealed" && (p.status === "launching" || p.status === "building"),
+              (p) => p.kind === "revealed" && (p.status === "live" || p.status === "launching" || p.status === "building"),
             )
           : allProjects.filter((p) => p.kind === "revealed" && p.status === "upcoming"),
   );
@@ -181,11 +181,13 @@
               icon={project.icon}
               status={project.status}
               href={project.href}
-              statusLabel={project.status === "launching"
-                ? locale.projects.statusLaunching
-                : project.status === "building"
-                  ? locale.projects.statusBuilding
-                  : locale.projects.statusUpcoming}
+              statusLabel={project.status === "live"
+                ? locale.projects.statusLive
+                : project.status === "launching"
+                  ? locale.projects.statusLaunching
+                  : project.status === "building"
+                    ? locale.projects.statusBuilding
+                    : locale.projects.statusUpcoming}
             />
           {/each}
         </div>

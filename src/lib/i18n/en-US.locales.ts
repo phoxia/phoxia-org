@@ -11,7 +11,7 @@ const en: LocaleShape = {
     eyebrow: "Open source · AGPLv3 · Transparent",
     title: "Software can be fair.",
     subtitle:
-      "Phoxia is an open source ecosystem committed to returning as much value as possible to developers while maintaining a sustainable and transparent ecosystem. No VC terms. No extraction.",
+      "Phoxia is an open source ecosystem built around one conviction: good software dies when its maintainers run out of time, not ideas. Every tool we build, every dollar we earn, is aimed at changing that. No VC terms. No extraction.",
     ctaPrimary: "Explore projects",
     ctaSecondary: "Our principles",
     luxLabel: "Lux, the Phoxia mascot",
@@ -20,7 +20,7 @@ const en: LocaleShape = {
     title: "Built differently",
     fairRevenue: {
       title: "Developers first",
-      desc: "Every decision starts with developer impact. Phoxia is committed to returning as much value as possible to the developer community: through grants, bounties, and programs built by devs, for devs.",
+      desc: "Every decision starts with developer impact. The core bet: when maintainers have more time, open source gets better for everyone. As the ecosystem grows, that means grants, bounties, and programs built for the people who keep it running.",
     },
     transparency: {
       title: "Transparent by default",
@@ -34,6 +34,7 @@ const en: LocaleShape = {
   projects: {
     title: "The ecosystem",
     subtitle: "Independent tools, shared principles.",
+    statusLive: "Live",
     statusLaunching: "Launching soon",
     statusBuilding: "Building",
     statusUpcoming: "Upcoming",
@@ -52,7 +53,7 @@ const en: LocaleShape = {
     },
     tools: {
       name: "Tools",
-      desc: "45+ free developer tools: JSON diff, regex tester, base64, UUID, and more. Zero ads unless you opt in.",
+      desc: "19 free developer tools that run entirely in your browser. JSON, JWT, hash, regex, cURL, and more. No data leaves your machine.",
     },
     bounty: {
       name: "Bounty",
@@ -118,7 +119,7 @@ const en: LocaleShape = {
     reportsEmpty: "No reports published yet.",
     principlesTitle: "Our commitment",
     principle1:
-      "Phoxia is committed to returning as much value as possible to developers while maintaining a sustainable and transparent ecosystem.",
+      "Phoxia is committed to helping open source maintainers dedicate more time to the projects the world relies on, while keeping the ecosystem sustainable and transparent.",
     principle2:
       "Every dollar retained by the platform has a clear, public justification listed above.",
     principle3:

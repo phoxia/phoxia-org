@@ -22,6 +22,7 @@ export type LocaleShape = {
   projects: {
     title: string;
     subtitle: string;
+    statusLive: string;
     statusLaunching: string;
     statusBuilding: string;
     statusUpcoming: string;

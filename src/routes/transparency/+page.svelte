@@ -14,7 +14,7 @@
   <title>Phoxia • Transparency</title>
   <meta
     name="description"
-    content="Every dollar that flows through Phoxia has a public justification. Revenue, costs, distributions, and community investments, all open."
+    content="Every dollar that flows through Phoxia has a public justification. Revenue, costs, distributions, and community investments, all aimed at giving open source maintainers more time."
   />
   <meta property="og:title" content="Phoxia • Transparency" />
   <meta
