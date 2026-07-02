@@ -2,6 +2,7 @@
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
   import Lux from "$lib/components/lux.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { Github } from "$lib/icons";
   import { t } from "$lib/i18n/i18n.svelte";
 
@@ -10,27 +11,12 @@
   const categories = $derived(Object.values(locale.transparencyPage.categories));
 </script>
 
-<svelte:head>
-  <title>Phoxia • Transparency</title>
-  <meta
-    name="description"
-    content="Every dollar that flows through Phoxia has a public justification. Revenue, costs, distributions, and community investments, all aimed at giving open source maintainers more time."
-  />
-  <meta property="og:title" content="Phoxia • Transparency" />
-  <meta
-    property="og:description"
-    content="Every dollar that flows through Phoxia has a public justification. No hidden ledger."
-  />
-  <meta property="og:url" content="https://phoxia.org/transparency" />
-  <meta property="og:image" content="https://phoxia.org/brand/og.png" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Phoxia • Transparency" />
-  <meta
-    name="twitter:description"
-    content="Every dollar that flows through Phoxia has a public justification. No hidden ledger."
-  />
-  <link rel="canonical" href="https://phoxia.org/transparency" />
-</svelte:head>
+<Seo
+  title="Transparency"
+  description="Every dollar that flows through Phoxia has a public justification. Revenue, costs, distributions, and community investments, all aimed at giving open source maintainers more time."
+  ogDescription="Every dollar that flows through Phoxia has a public justification. No hidden ledger."
+  path="/transparency"
+/>
 
 <Nav />
 
@@ -378,7 +364,7 @@
     align-items: center;
     gap: 0.4rem;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     border: none;
     border-radius: var(--radius);
     padding: 0.65rem 1.4rem;
@@ -394,7 +380,7 @@
 
   .btn-primary:hover {
     background: var(--color-accent-hover);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     transform: translateY(-1px);
   }
 

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { t, getLang } from "$lib/i18n/i18n.svelte";
 
   let locale = $derived(t());
@@ -27,32 +28,14 @@
   );
 </script>
 
-<svelte:head>
-  <title>Phoxia • {isPT ? meta.title.pt : meta.title.en}</title>
-  <meta
-    name="description"
-    content={isPT
-      ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
-      : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
-  />
-  <meta property="og:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
-  <meta
-    property="og:description"
-    content={isPT
-      ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
-      : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
-  />
-  <meta property="og:url" content="https://phoxia.org/blog/phoxia-org-launch" />
-  <meta property="og:type" content="article" />
-  <meta name="twitter:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
-  <meta
-    name="twitter:description"
-    content={isPT
-      ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
-      : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
-  />
-  <link rel="canonical" href="https://phoxia.org/blog/phoxia-org-launch" />
-</svelte:head>
+<Seo
+  title={isPT ? meta.title.pt : meta.title.en}
+  description={isPT
+    ? "Hoje o phoxia.org vai ao ar. Uma nota breve sobre por que a Phoxia existe e o que vem a seguir."
+    : "Today phoxia.org goes live. A brief note on why Phoxia exists and what comes next."}
+  path="/blog/phoxia-org-launch"
+  type="article"
+/>
 
 <Nav />
 

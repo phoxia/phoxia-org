@@ -1,6 +1,7 @@
 <script lang="ts">
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { Mail, ArrowUpRight } from "$lib/icons";
   import { t } from "$lib/i18n/i18n.svelte";
 
@@ -28,17 +29,7 @@
   ]);
 </script>
 
-<svelte:head>
-  <title>Phoxia • {locale.contactPage.title}</title>
-  <meta name="description" content={locale.contactPage.subtitle} />
-  <meta property="og:title" content="Phoxia • {locale.contactPage.title}" />
-  <meta property="og:description" content={locale.contactPage.subtitle} />
-  <meta property="og:url" content="https://phoxia.org/contact" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Phoxia • {locale.contactPage.title}" />
-  <meta name="twitter:description" content={locale.contactPage.subtitle} />
-  <link rel="canonical" href="https://phoxia.org/contact" />
-</svelte:head>
+<Seo title={locale.contactPage.title} description={locale.contactPage.subtitle} path="/contact" />
 
 <Nav />
 

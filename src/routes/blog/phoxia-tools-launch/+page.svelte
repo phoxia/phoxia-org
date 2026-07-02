@@ -1,6 +1,7 @@
 <script lang="ts">
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { t, getLang } from "$lib/i18n/i18n.svelte";
 
   let locale = $derived(t());
@@ -27,32 +28,14 @@
   );
 </script>
 
-<svelte:head>
-  <title>Phoxia • {isPT ? meta.title.pt : meta.title.en}</title>
-  <meta
-    name="description"
-    content={isPT
-      ? "Phoxia Tools está no ar em tools.phoxia.org. 19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
-      : "Phoxia Tools is live at tools.phoxia.org. 19 free developer tools that run entirely in your browser, no data sent anywhere."}
-  />
-  <meta property="og:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
-  <meta
-    property="og:description"
-    content={isPT
-      ? "Phoxia Tools está no ar em tools.phoxia.org. 19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
-      : "Phoxia Tools is live at tools.phoxia.org. 19 free developer tools that run entirely in your browser, no data sent anywhere."}
-  />
-  <meta property="og:url" content="https://phoxia.org/blog/phoxia-tools-launch" />
-  <meta property="og:type" content="article" />
-  <meta name="twitter:title" content="Phoxia • {isPT ? meta.title.pt : meta.title.en}" />
-  <meta
-    name="twitter:description"
-    content={isPT
-      ? "Phoxia Tools está no ar em tools.phoxia.org. 19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
-      : "Phoxia Tools is live at tools.phoxia.org. 19 free developer tools that run entirely in your browser, no data sent anywhere."}
-  />
-  <link rel="canonical" href="https://phoxia.org/blog/phoxia-tools-launch" />
-</svelte:head>
+<Seo
+  title={isPT ? meta.title.pt : meta.title.en}
+  description={isPT
+    ? "Phoxia Tools está no ar em tools.phoxia.org. 19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
+    : "Phoxia Tools is live at tools.phoxia.org. 19 free developer tools that run entirely in your browser, no data sent anywhere."}
+  path="/blog/phoxia-tools-launch"
+  type="article"
+/>
 
 <Nav />
 

@@ -36,7 +36,7 @@
     <!-- Logo -->
     <a href="/" class="nav-logo" aria-label="Phoxia, home">
       <img
-        src="/brand/symbol.png"
+        src="/brand/symbol-64.webp"
         alt=""
         width="28"
         height="28"

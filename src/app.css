@@ -35,6 +35,7 @@
   --color-accent-hover: #fbbf24;
   --color-accent-glow: #fcd34d;
   --color-accent-dim: rgba(245, 158, 11, 0.12);
+  --color-on-accent: #050508;
   --color-edge: #6d28d9;
   --color-edge-light: #8b5cf6;
   --color-edge-dim: rgba(109, 40, 217, 0.15);
@@ -60,12 +61,13 @@
   --color-surface: #ffffff;
   --color-surface-raised: #f4f2ee;
   --color-text: #171308;
-  --color-text-muted: #78746d;
+  --color-text-muted: #747069;
   --color-text-faint: #b8b5b0;
   --color-accent: #d97706;
   --color-accent-hover: #b45309;
   --color-accent-glow: #f59e0b;
   --color-accent-dim: rgba(217, 119, 6, 0.1);
+  --color-on-accent: #171308;
   --color-edge: #7c3aed;
   --color-edge-light: #a78bfa;
   --color-edge-dim: rgba(124, 58, 237, 0.1);
@@ -80,9 +82,9 @@
   --status-building-bg: rgba(124, 58, 237, 0.1);
   --status-building-text: #7c3aed;
   --status-upcoming-bg: rgba(120, 116, 109, 0.1);
-  --status-upcoming-text: #78746d;
+  --status-upcoming-text: #706c65;
   --status-live-bg: rgba(22, 163, 74, 0.12);
-  --status-live-text: #16a34a;
+  --status-live-text: #007f26;
 }
 
 /* ---- Base ---- */

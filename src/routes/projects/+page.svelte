@@ -4,6 +4,7 @@
   import Lux from "$lib/components/lux.svelte";
   import ProjectCard from "$lib/components/project-card.svelte";
   import ClassifiedCard from "$lib/components/classified-card.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import {
     Fingerprint,
     Activity,
@@ -102,26 +103,11 @@
   const showSections = $derived(activeFilter === "all");
 </script>
 
-<svelte:head>
-  <title>Phoxia • All Projects</title>
-  <meta
-    name="description"
-    content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
-  />
-  <meta property="og:title" content="Phoxia • All Projects" />
-  <meta
-    property="og:description"
-    content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
-  />
-  <meta property="og:url" content="https://phoxia.org/projects" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Phoxia • All Projects" />
-  <meta
-    name="twitter:description"
-    content="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
-  />
-  <link rel="canonical" href="https://phoxia.org/projects" />
-</svelte:head>
+<Seo
+  title="All Projects"
+  description="The Phoxia ecosystem: tools built under the same commitment. AGPLv3, transparent by default, community-driven."
+  path="/projects"
+/>
 
 <Nav />
 
@@ -464,7 +450,7 @@
     align-items: center;
     gap: 0.4rem;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     border: none;
     border-radius: var(--radius);
     padding: 0.65rem 1.4rem;
@@ -480,7 +466,7 @@
 
   .btn-primary:hover {
     background: var(--color-accent-hover);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     transform: translateY(-1px);
   }
 

@@ -28,6 +28,7 @@
     "globals": "^17.6.0",
     "prettier": "~3.5.0",
     "prettier-plugin-svelte": "~3.4.0",
+    "sharp": "^0.35.3",
     "svelte": "~5.28.0",
     "svelte-check": "~4.2.0",
     "svelte-sitemap": "^4.0.3",

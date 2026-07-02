@@ -13,6 +13,9 @@ const config = {
     prerender: {
       handleHttpError: "warn",
     },
+    output: {
+      bundleStrategy: "single",
+    },
   },
 };
 

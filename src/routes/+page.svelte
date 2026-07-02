@@ -15,6 +15,7 @@
   import Nav from "$lib/components/nav.svelte";
   import Footer from "$lib/components/footer.svelte";
   import ProjectCard from "$lib/components/project-card.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { t } from "$lib/i18n/i18n.svelte";
 
   let locale = $derived(t());
@@ -69,28 +70,12 @@
   ]);
 </script>
 
-<svelte:head>
-  <title>Phoxia • Open source. Transparent. Community-first.</title>
-  <meta
-    name="description"
-    content="Phoxia is an open source ecosystem built to give open source maintainers more time for the projects the world depends on. AGPLv3. No VC terms."
-  />
-  <meta property="og:title" content="Phoxia • Open source. Transparent. Community-first." />
-  <meta
-    property="og:description"
-    content="Every contribution to Phoxia helps give open source maintainers more time for the projects the world depends on. AGPLv3."
-  />
-  <meta property="og:image" content="/brand/og.png" />
-  <meta property="og:url" content="https://phoxia.org" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Phoxia • Open source. Transparent. Community-first." />
-  <meta
-    name="twitter:description"
-    content="Every contribution to Phoxia helps give open source maintainers more time for the projects the world depends on. AGPLv3."
-  />
-  <link rel="canonical" href="https://phoxia.org" />
-</svelte:head>
+<Seo
+  title="Open source. Transparent. Community-first."
+  description="Phoxia is an open source ecosystem built to give open source maintainers more time for the projects the world depends on. AGPLv3. No VC terms."
+  ogDescription="Every contribution to Phoxia helps give open source maintainers more time for the projects the world depends on. AGPLv3."
+  path=""
+/>
 
 <Nav />
 
@@ -324,7 +309,7 @@
     align-items: center;
     gap: 0.4rem;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     border: none;
     border-radius: var(--radius);
     padding: 0.65rem 1.4rem;
@@ -341,7 +326,7 @@
 
   .btn-primary:hover {
     background: var(--color-accent-hover);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
     transform: translateY(-1px);
   }
 

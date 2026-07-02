@@ -1,5 +1,6 @@
 <script lang="ts">
   import LegalPage from "$lib/components/legal-page.svelte";
+  import Seo from "$lib/components/seo.svelte";
   import { Lock } from "$lib/icons";
   import { t, getLang } from "$lib/i18n/i18n.svelte";
 
@@ -217,26 +218,11 @@
   );
 </script>
 
-<svelte:head>
-  <title>Phoxia • {locale.privacyPage.title}</title>
-  <meta
-    name="description"
-    content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
-  />
-  <meta property="og:title" content="Phoxia • {locale.privacyPage.title}" />
-  <meta
-    property="og:description"
-    content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
-  />
-  <meta property="og:url" content="https://phoxia.org/privacy" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Phoxia • {locale.privacyPage.title}" />
-  <meta
-    name="twitter:description"
-    content="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
-  />
-  <link rel="canonical" href="https://phoxia.org/privacy" />
-</svelte:head>
+<Seo
+  title={locale.privacyPage.title}
+  description="How Phoxia collects, uses, and protects data on phoxia.org. No tracking. No ads. AGPLv3 open source."
+  path="/privacy"
+/>
 
 <LegalPage
   title={locale.privacyPage.title}

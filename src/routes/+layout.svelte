@@ -16,7 +16,12 @@
 </script>
 
 <svelte:head>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"Phoxia","url":"https://phoxia.org","logo":"https://phoxia.org/brand/symbol.png"}
+  </script>
   <meta property="og:site_name" content="Phoxia" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="pt_BR" />
   <meta property="og:image" content="https://phoxia.org/brand/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
