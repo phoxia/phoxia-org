@@ -85,11 +85,7 @@
     <div class="section-inner">
       <h2 class="section-title">{locale.transparencyPage.principlesTitle}</h2>
       <ul class="commitment-list" role="list">
-        {#each [
-          locale.transparencyPage.principle1,
-          locale.transparencyPage.principle2,
-          locale.transparencyPage.principle3,
-        ] as p, i (i)}
+        {#each [locale.transparencyPage.principle1, locale.transparencyPage.principle2, locale.transparencyPage.principle3] as p, i (i)}
           <li class="commitment-item">{p}</li>
         {/each}
       </ul>
@@ -391,7 +387,9 @@
     font-weight: 600;
     text-decoration: none;
     min-height: 44px;
-    transition: background 0.15s, transform 0.15s;
+    transition:
+      background 0.15s,
+      transform 0.15s;
   }
 
   .btn-primary:hover {
@@ -413,9 +411,13 @@
       gap: 2rem;
     }
 
-    .hero-mascot { order: -1; }
+    .hero-mascot {
+      order: -1;
+    }
 
-    .hero { padding: 3.5rem 1.5rem 3rem; }
+    .hero {
+      padding: 3.5rem 1.5rem 3rem;
+    }
   }
 
   @media (max-width: 540px) {

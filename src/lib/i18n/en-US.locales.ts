@@ -64,8 +64,14 @@ const en: LocaleShape = {
     title: "Our principles",
     subtitle: "The commitments that guide every decision we make.",
     p1: { title: "Developers first", desc: "Every decision starts with developer impact." },
-    p2: { title: "Transparent by default", desc: "Revenue, costs, and allocations are always public." },
-    p3: { title: "Open source whenever possible", desc: "AGPLv3. Fork it, audit it, run it yourself." },
+    p2: {
+      title: "Transparent by default",
+      desc: "Revenue, costs, and allocations are always public.",
+    },
+    p3: {
+      title: "Open source whenever possible",
+      desc: "AGPLv3. Fork it, audit it, run it yourself.",
+    },
     p4: { title: "Sustainable growth", desc: "Long-term ecosystem health over short-term profit." },
     p5: { title: "Security & privacy by design", desc: "Not bolted on, built in from the start." },
     p6: { title: "Community participation matters", desc: "Contributors shape the direction." },
@@ -182,7 +188,8 @@ const en: LocaleShape = {
     subtitle: "Reach out by email or join the community on Discord.",
     emailSection: "Email",
     discordSection: "Community",
-    discordDesc: "Join the Phoxia Discord server to chat, ask questions, and follow along as things are built.",
+    discordDesc:
+      "Join the Phoxia Discord server to chat, ask questions, and follow along as things are built.",
     joinServer: "Join the server",
     emails: {
       general: { label: "General", desc: "Questions, ideas, and everything else." },

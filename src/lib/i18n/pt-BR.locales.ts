@@ -63,19 +63,33 @@ const ptBR: LocaleShape = {
   principles: {
     title: "Nossos princípios",
     subtitle: "Os compromissos que guiam cada decisão que tomamos.",
-    p1: { title: "Desenvolvedores primeiro", desc: "Cada decisão começa pelo impacto nos desenvolvedores." },
-    p2: { title: "Transparência por padrão", desc: "Receita, custos e alocações são sempre públicos." },
-    p3: { title: "Código aberto sempre que possível", desc: "AGPLv3. Faça um fork, audite, rode você mesmo." },
-    p4: { title: "Crescimento sustentável", desc: "Saúde do ecossistema a longo prazo sobre lucro imediato." },
-    p5: { title: "Segurança e privacidade por design", desc: "Não é um add-on, está construído desde o início." },
+    p1: {
+      title: "Desenvolvedores primeiro",
+      desc: "Cada decisão começa pelo impacto nos desenvolvedores.",
+    },
+    p2: {
+      title: "Transparência por padrão",
+      desc: "Receita, custos e alocações são sempre públicos.",
+    },
+    p3: {
+      title: "Código aberto sempre que possível",
+      desc: "AGPLv3. Faça um fork, audite, rode você mesmo.",
+    },
+    p4: {
+      title: "Crescimento sustentável",
+      desc: "Saúde do ecossistema a longo prazo sobre lucro imediato.",
+    },
+    p5: {
+      title: "Segurança e privacidade por design",
+      desc: "Não é um add-on, está construído desde o início.",
+    },
     p6: { title: "Participação da comunidade importa", desc: "Contribuidores moldam a direção." },
     cta: "Ver nosso relatório de transparência",
   },
   transparencyPage: {
     eyebrow: "Livros abertos",
     title: "Transparência",
-    subtitle:
-      "Todo real que passa pela Phoxia tem uma justificativa pública. Sem ledger oculto.",
+    subtitle: "Todo real que passa pela Phoxia tem uma justificativa pública. Sem ledger oculto.",
     badgeLabel: "Transparente",
     badgeValue: "Livros abertos · Comunidade primeiro · AGPLv3",
     revenueTitle: "Breakdown do ecossistema",
@@ -182,7 +196,8 @@ const ptBR: LocaleShape = {
     subtitle: "Fale por e-mail ou entre na comunidade pelo Discord.",
     emailSection: "E-mail",
     discordSection: "Comunidade",
-    discordDesc: "Entre no servidor do Discord da Phoxia para conversar, tirar dúvidas e acompanhar o que está sendo construído.",
+    discordDesc:
+      "Entre no servidor do Discord da Phoxia para conversar, tirar dúvidas e acompanhar o que está sendo construído.",
     joinServer: "Entrar no servidor",
     emails: {
       general: { label: "Geral", desc: "Perguntas, ideias e tudo mais." },

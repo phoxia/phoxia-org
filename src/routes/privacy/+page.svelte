@@ -94,7 +94,7 @@
       content:
         "Material changes will be announced in our public GitHub repository " +
         "(github.com/phoxia/phoxia-org) at least 14 days before taking effect. " +
-        "The \"last updated\" date at the top of this page reflects the most recent revision.",
+        'The "last updated" date at the top of this page reflects the most recent revision.',
     },
     {
       id: "contact",
@@ -196,7 +196,7 @@
       content:
         "Mudanças relevantes serão anunciadas em nosso repositório público no GitHub " +
         "(github.com/phoxia/phoxia-org) pelo menos 14 dias antes de entrarem em vigor. " +
-        "A data de \"última atualização\" no topo desta página reflete a revisão mais recente.",
+        'A data de "última atualização" no topo desta página reflete a revisão mais recente.',
     },
     {
       id: "contact",
@@ -213,7 +213,7 @@
   const lastUpdated = $derived(
     lang === "pt-BR"
       ? "Última atualização: 27 de junho de 2026 · Versão 1.0"
-      : "Last updated: June 27, 2026 · Version 1.0",
+      : "Last updated: June 27, 2026 · Version 1.0"
   );
 </script>
 

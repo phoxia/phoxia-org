@@ -40,7 +40,7 @@
         "The full license text is available in our GitHub repository.\n\n" +
         "Written content (blog posts, documentation) is licensed under Creative Commons " +
         "Attribution 4.0 International (CC BY 4.0) unless otherwise noted.\n\n" +
-        "The Phoxia name, wordmark, logo, and mascot (\"Lux\") are part of Phoxia's project identity. " +
+        'The Phoxia name, wordmark, logo, and mascot ("Lux") are part of Phoxia\'s project identity. ' +
         "Please do not use them in ways that imply endorsement or affiliation without prior written permission.",
     },
     {
@@ -67,7 +67,7 @@
       id: "disclaimer",
       title: "6. Disclaimer of warranties",
       content:
-        "phoxia.org is provided \"as is\" and \"as available,\" without warranty of any kind, " +
+        'phoxia.org is provided "as is" and "as available," without warranty of any kind, ' +
         "express or implied. Phoxia does not warrant that the website will be error-free, " +
         "uninterrupted, secure, or accurate at all times.\n\n" +
         "Information about Phoxia's projects is provided for informational purposes only " +
@@ -101,7 +101,7 @@
       content:
         "We may update these terms at any time. Material changes will be announced in our " +
         "public GitHub repository (github.com/phoxia/phoxia-org) at least 14 days before " +
-        "taking effect. The \"last updated\" date at the top of this page reflects the most " +
+        'taking effect. The "last updated" date at the top of this page reflects the most ' +
         "recent revision.\n\n" +
         "Continued use of phoxia.org after changes take effect constitutes acceptance of " +
         "the revised terms.",
@@ -148,7 +148,7 @@
         "O texto completo da licença está disponível em nosso repositório no GitHub.\n\n" +
         "Conteúdo escrito (posts de blog, documentação) é licenciado sob Creative Commons " +
         "Atribuição 4.0 Internacional (CC BY 4.0), salvo indicação em contrário.\n\n" +
-        "O nome Phoxia, logotipo e mascote (\"Lux\") fazem parte da identidade do projeto Phoxia. " +
+        'O nome Phoxia, logotipo e mascote ("Lux") fazem parte da identidade do projeto Phoxia. ' +
         "Por favor, não os utilize de forma que implique endosso ou afiliação sem autorização prévia e por escrito.",
     },
     {
@@ -175,7 +175,7 @@
       id: "disclaimer",
       title: "6. Isenção de garantias",
       content:
-        "phoxia.org é fornecido \"como está\" e \"conforme disponível\", sem garantia de qualquer " +
+        'phoxia.org é fornecido "como está" e "conforme disponível", sem garantia de qualquer ' +
         "tipo, expressa ou implícita. A Phoxia não garante que o site será livre de erros, " +
         "ininterrupto, seguro ou preciso em todos os momentos.\n\n" +
         "As informações sobre os projetos da Phoxia são fornecidas apenas para fins informativos " +
@@ -209,7 +209,7 @@
       content:
         "Podemos atualizar estes termos a qualquer momento. Mudanças relevantes serão anunciadas " +
         "em nosso repositório público no GitHub (github.com/phoxia/phoxia-org) pelo menos 14 dias " +
-        "antes de entrarem em vigor. A data de \"última atualização\" no topo desta página reflete " +
+        'antes de entrarem em vigor. A data de "última atualização" no topo desta página reflete ' +
         "a revisão mais recente.\n\n" +
         "O uso contínuo do phoxia.org após as mudanças entrarem em vigor constitui aceitação " +
         "dos termos revisados.",
@@ -228,7 +228,7 @@
   const lastUpdated = $derived(
     lang === "pt-BR"
       ? "Última atualização: 27 de junho de 2026 · Versão 1.0"
-      : "Last updated: June 27, 2026 · Version 1.0",
+      : "Last updated: June 27, 2026 · Version 1.0"
   );
 </script>
 

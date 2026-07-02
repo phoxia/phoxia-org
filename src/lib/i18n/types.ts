@@ -118,8 +118,8 @@ export type LocaleShape = {
     minRead: string;
     empty: string;
   };
-  privacyPage: { title: string; };
-  termsPage: { title: string; };
+  privacyPage: { title: string };
+  termsPage: { title: string };
   contactPage: {
     title: string;
     subtitle: string;

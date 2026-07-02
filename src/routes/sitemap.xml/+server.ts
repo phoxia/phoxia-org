@@ -17,7 +17,7 @@ export const GET: RequestHandler = () => {
   const urls = routes
     .map(
       ({ path, priority }) =>
-        `  <url>\n    <loc>https://phoxia.org/${path}</loc>\n    <priority>${priority}</priority>\n  </url>`,
+        `  <url>\n    <loc>https://phoxia.org/${path}</loc>\n    <priority>${priority}</priority>\n  </url>`
     )
     .join("\n");
 

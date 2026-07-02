@@ -92,7 +92,11 @@
           <p class="post-excerpt">
             {lang === "pt-BR" ? post.excerpt.pt : post.excerpt.en}
           </p>
-          <a href="/blog/{post.slug}" class="post-cta" aria-label={lang === "pt-BR" ? post.title.pt : post.title.en}>
+          <a
+            href="/blog/{post.slug}"
+            class="post-cta"
+            aria-label={lang === "pt-BR" ? post.title.pt : post.title.en}
+          >
             {locale.blog.readMore}
             <ArrowRight size={14} aria-hidden="true" />
           </a>
@@ -203,7 +207,9 @@
     transition: color 0.15s;
   }
 
-  .post-link:hover { color: var(--color-accent); }
+  .post-link:hover {
+    color: var(--color-accent);
+  }
 
   .post-excerpt {
     font-size: 0.9375rem;
@@ -225,5 +231,7 @@
     transition: gap 0.15s;
   }
 
-  .post-cta:hover { gap: 0.55rem; }
+  .post-cta:hover {
+    gap: 0.55rem;
+  }
 </style>

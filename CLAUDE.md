@@ -6,14 +6,14 @@ Phoxia's public face. `phoxia.org` — landing page, principles, blog, transpare
 
 ## Stack
 
-| Layer | Choice | Notes |
-|-------|--------|-------|
-| Frontend | SvelteKit 5 + adapter-static | Fully static site |
-| Style | CSS via `var(--*)` custom properties | Never raw Tailwind — only vars |
-| Icons | `lucide-svelte` | Direct import; exported via `$lib/icons.ts` |
-| i18n | Manual (`$lib/i18n/`) | `getLang()` returns `"en"` or `"pt-BR"` |
-| Blog | Svelte components | No mdsvex for now; future migration to `.md` |
-| Deploy | Vercel (initial) | `phoxia.org` with TLS |
+| Layer    | Choice                               | Notes                                        |
+| -------- | ------------------------------------ | -------------------------------------------- |
+| Frontend | SvelteKit 5 + adapter-static         | Fully static site                            |
+| Style    | CSS via `var(--*)` custom properties | Never raw Tailwind — only vars               |
+| Icons    | `lucide-svelte`                      | Direct import; exported via `$lib/icons.ts`  |
+| i18n     | Manual (`$lib/i18n/`)                | `getLang()` returns `"en"` or `"pt-BR"`      |
+| Blog     | Svelte components                    | No mdsvex for now; future migration to `.md` |
+| Deploy   | Vercel (initial)                     | `phoxia.org` with TLS                        |
 
 ## Pages
 

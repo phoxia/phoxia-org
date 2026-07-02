@@ -65,21 +65,21 @@
   --color-accent: #d97706;
   --color-accent-hover: #b45309;
   --color-accent-glow: #f59e0b;
-  --color-accent-dim: rgba(217, 119, 6, 0.10);
+  --color-accent-dim: rgba(217, 119, 6, 0.1);
   --color-edge: #7c3aed;
   --color-edge-light: #a78bfa;
-  --color-edge-dim: rgba(124, 58, 237, 0.10);
+  --color-edge-dim: rgba(124, 58, 237, 0.1);
   --color-success: #16a34a;
   --color-warning: #ea580c;
   --color-error: #dc2626;
   --color-border: #e7e5e0;
   --color-border-strong: #d0cec9;
 
-  --status-launching-bg: rgba(217, 119, 6, 0.10);
+  --status-launching-bg: rgba(217, 119, 6, 0.1);
   --status-launching-text: #b45309;
-  --status-building-bg: rgba(124, 58, 237, 0.10);
+  --status-building-bg: rgba(124, 58, 237, 0.1);
   --status-building-text: #7c3aed;
-  --status-upcoming-bg: rgba(120, 116, 109, 0.10);
+  --status-upcoming-bg: rgba(120, 116, 109, 0.1);
   --status-upcoming-text: #78746d;
   --status-live-bg: rgba(22, 163, 74, 0.12);
   --status-live-text: #16a34a;

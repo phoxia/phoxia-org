@@ -46,18 +46,26 @@
   ]);
 
   const features = $derived([
-    { icon: Scale, title: locale.features.fairRevenue.title, desc: locale.features.fairRevenue.desc },
-    { icon: Eye, title: locale.features.transparency.title, desc: locale.features.transparency.desc },
+    {
+      icon: Scale,
+      title: locale.features.fairRevenue.title,
+      desc: locale.features.fairRevenue.desc,
+    },
+    {
+      icon: Eye,
+      title: locale.features.transparency.title,
+      desc: locale.features.transparency.desc,
+    },
     { icon: Lock, title: locale.features.openSource.title, desc: locale.features.openSource.desc },
   ]);
 
   const principles = $derived([
-    { icon: Award,       title: locale.principles.p1.title, desc: locale.principles.p1.desc },
-    { icon: Eye,         title: locale.principles.p2.title, desc: locale.principles.p2.desc },
-    { icon: Lock,        title: locale.principles.p3.title, desc: locale.principles.p3.desc },
-    { icon: Activity,    title: locale.principles.p4.title, desc: locale.principles.p4.desc },
+    { icon: Award, title: locale.principles.p1.title, desc: locale.principles.p1.desc },
+    { icon: Eye, title: locale.principles.p2.title, desc: locale.principles.p2.desc },
+    { icon: Lock, title: locale.principles.p3.title, desc: locale.principles.p3.desc },
+    { icon: Activity, title: locale.principles.p4.title, desc: locale.principles.p4.desc },
     { icon: ShieldCheck, title: locale.principles.p5.title, desc: locale.principles.p5.desc },
-    { icon: Scale,       title: locale.principles.p6.title, desc: locale.principles.p6.desc },
+    { icon: Scale, title: locale.principles.p6.title, desc: locale.principles.p6.desc },
   ]);
 </script>
 
@@ -326,7 +334,9 @@
     text-decoration: none;
     cursor: pointer;
     min-height: 44px;
-    transition: background 0.15s, transform 0.15s;
+    transition:
+      background 0.15s,
+      transform 0.15s;
   }
 
   .btn-primary:hover {
@@ -349,7 +359,9 @@
     font-weight: 500;
     text-decoration: none;
     min-height: 44px;
-    transition: border-color 0.15s, color 0.15s;
+    transition:
+      border-color 0.15s,
+      color 0.15s;
   }
 
   .btn-ghost:hover {

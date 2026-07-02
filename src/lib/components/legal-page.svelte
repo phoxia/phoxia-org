@@ -37,7 +37,7 @@
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible.length > 0) activeSection = visible[0].target.id;
       },
-      { rootMargin: "-8% 0px -60% 0px", threshold: 0 },
+      { rootMargin: "-8% 0px -60% 0px", threshold: 0 }
     );
     sections.forEach((s) => {
       const el = document.getElementById(s.id);
@@ -96,11 +96,7 @@
     <!-- Content -->
     <main class="legal-content" id="main-content">
       {#each sections as section, i (section.id)}
-        <section
-          id={section.id}
-          class="legal-section"
-          class:last={i === sections.length - 1}
-        >
+        <section id={section.id} class="legal-section" class:last={i === sections.length - 1}>
           <h2 class="legal-section-title">{section.title}</h2>
           <p class="legal-section-text">{section.content}</p>
         </section>
@@ -194,7 +190,9 @@
   }
 
   @media (min-width: 1024px) {
-    .legal-sidebar { display: block; }
+    .legal-sidebar {
+      display: block;
+    }
   }
 
   .legal-toc-label {
@@ -229,7 +227,10 @@
     font-size: 0.8rem;
     cursor: pointer;
     line-height: 1.45;
-    transition: color 0.12s, background 0.12s, border-color 0.12s;
+    transition:
+      color 0.12s,
+      background 0.12s,
+      border-color 0.12s;
   }
 
   .legal-toc-item:hover {
@@ -253,7 +254,9 @@
   }
 
   @media (min-width: 1024px) {
-    .legal-content { margin: 0; }
+    .legal-content {
+      margin: 0;
+    }
   }
 
   .legal-section {

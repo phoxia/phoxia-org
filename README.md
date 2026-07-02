@@ -23,16 +23,16 @@ npm run check     # type-check
 
 ## Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Landing page |
-| `/projects` | All projects with status |
+| Route           | Description                         |
+| --------------- | ----------------------------------- |
+| `/`             | Landing page                        |
+| `/projects`     | All projects with status            |
 | `/transparency` | Revenue, costs, and monthly reports |
-| `/blog` | Blog post list |
-| `/blog/[slug]` | Individual post |
-| `/contact` | Contact emails + Discord community |
-| `/privacy` | Privacy policy (LGPD/GDPR) |
-| `/terms` | Terms of service |
+| `/blog`         | Blog post list                      |
+| `/blog/[slug]`  | Individual post                     |
+| `/contact`      | Contact emails + Discord community  |
+| `/privacy`      | Privacy policy (LGPD/GDPR)          |
+| `/terms`        | Terms of service                    |
 
 ## License
 

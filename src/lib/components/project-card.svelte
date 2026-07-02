@@ -57,7 +57,9 @@
     color: var(--color-text);
     min-height: unset;
     position: relative;
-    transition: border-color 0.2s, transform 0.2s;
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
   }
 
   .project-card:hover {
@@ -148,7 +150,9 @@
     align-items: center;
     color: var(--color-text-faint);
     align-self: flex-end;
-    transition: color 0.15s, transform 0.15s;
+    transition:
+      color 0.15s,
+      transform 0.15s;
   }
 
   .project-card:hover .card-arrow {

@@ -47,7 +47,9 @@
     border: 1px dashed var(--color-border-strong);
     border-radius: var(--radius-lg);
     background: var(--color-surface);
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
     cursor: default;
     position: relative;
     overflow: hidden;
@@ -57,11 +59,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-      circle at 50% 0%,
-      rgba(109, 40, 217, 0.04) 0%,
-      transparent 70%
-    );
+    background: radial-gradient(circle at 50% 0%, rgba(109, 40, 217, 0.04) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -139,10 +137,18 @@
     opacity: 0.5;
   }
 
-  .w-full { width: 100%; }
-  .w-long { width: 72%; }
-  .w-med  { width: 85%; }
-  .w-short { width: 55%; }
+  .w-full {
+    width: 100%;
+  }
+  .w-long {
+    width: 72%;
+  }
+  .w-med {
+    width: 85%;
+  }
+  .w-short {
+    width: 55%;
+  }
 
   .card-footer {
     border-top: 1px solid var(--color-border);

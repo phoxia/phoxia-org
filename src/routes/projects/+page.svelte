@@ -87,14 +87,16 @@
         ? allProjects.filter((p) => p.kind === "classified")
         : activeFilter === "building"
           ? allProjects.filter(
-              (p) => p.kind === "revealed" && (p.status === "live" || p.status === "launching" || p.status === "building"),
+              (p) =>
+                p.kind === "revealed" &&
+                (p.status === "live" || p.status === "launching" || p.status === "building")
             )
-          : allProjects.filter((p) => p.kind === "revealed" && p.status === "upcoming"),
+          : allProjects.filter((p) => p.kind === "revealed" && p.status === "upcoming")
   );
 
   const revealed = $derived(allProjects.filter((p) => p.kind === "revealed") as RevealedProject[]);
   const classified = $derived(
-    allProjects.filter((p) => p.kind === "classified") as ClassifiedProject[],
+    allProjects.filter((p) => p.kind === "classified") as ClassifiedProject[]
   );
 
   const showSections = $derived(activeFilter === "all");
@@ -145,12 +147,7 @@
        FILTER TABS
        ====================================================== -->
   <div class="filter-bar" role="tablist" aria-label="Filter projects">
-    {#each [
-      { key: "all", label: locale.projectsPage.filterAll },
-      { key: "building", label: locale.projectsPage.filterBuilding },
-      { key: "upcoming", label: locale.projectsPage.filterUpcoming },
-      { key: "classified", label: locale.projectsPage.filterClassified },
-    ] as tab (tab.key)}
+    {#each [{ key: "all", label: locale.projectsPage.filterAll }, { key: "building", label: locale.projectsPage.filterBuilding }, { key: "upcoming", label: locale.projectsPage.filterUpcoming }, { key: "classified", label: locale.projectsPage.filterClassified }] as tab (tab.key)}
       <button
         role="tab"
         aria-selected={activeFilter === tab.key}
@@ -207,7 +204,6 @@
         </div>
       </div>
     </section>
-
   {:else}
     <!-- FILTERED VIEW — flat grid -->
     <section class="projects-section">
@@ -359,7 +355,9 @@
     font-weight: 500;
     min-height: 44px;
     white-space: nowrap;
-    transition: color 0.15s, border-color 0.15s;
+    transition:
+      color 0.15s,
+      border-color 0.15s;
   }
 
   .filter-tab:hover {
@@ -475,7 +473,9 @@
     font-weight: 600;
     text-decoration: none;
     min-height: 44px;
-    transition: background 0.15s, transform 0.15s;
+    transition:
+      background 0.15s,
+      transform 0.15s;
   }
 
   .btn-primary:hover {
@@ -498,7 +498,9 @@
     font-weight: 500;
     text-decoration: none;
     min-height: 44px;
-    transition: border-color 0.15s, color 0.15s;
+    transition:
+      border-color 0.15s,
+      color 0.15s;
   }
 
   .btn-ghost:hover {
@@ -519,7 +521,9 @@
       gap: 2rem;
     }
 
-    .hero-mascot { order: -1; }
+    .hero-mascot {
+      order: -1;
+    }
 
     .hero {
       padding: 3.5rem 1.5rem 2.5rem;

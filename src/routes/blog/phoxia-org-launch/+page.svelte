@@ -23,7 +23,7 @@
       year: "numeric",
       month: "long",
       day: "numeric",
-    }),
+    })
   );
 </script>
 
@@ -58,7 +58,6 @@
 
 <main id="main-content">
   <article class="post">
-
     <!-- Header -->
     <header class="post-header">
       <a href="/blog" class="back-link">{locale.blog.backToBlog}</a>
@@ -76,14 +75,13 @@
     <!-- Content -->
     <div class="post-body">
       {#if isPT}
-
         <p>Hoje o <strong>phoxia.org</strong> está no ar.</p>
 
         <p>
-          Não tem muito o que dizer além disso, mas tem bastante o que mostrar.
-          A Phoxia existe porque acredito que software pode ser construído de forma diferente:
-          aberto por padrão, transparente nas decisões, sustentável no longo prazo.
-          Não como slogan em landing page, mas como prática real.
+          Não tem muito o que dizer além disso, mas tem bastante o que mostrar. A Phoxia existe
+          porque acredito que software pode ser construído de forma diferente: aberto por padrão,
+          transparente nas decisões, sustentável no longo prazo. Não como slogan em landing page,
+          mas como prática real.
         </p>
 
         <h2>O que está sendo construído</h2>
@@ -91,52 +89,57 @@
         <p>Três projetos estão em andamento agora:</p>
 
         <ul>
-          <li><strong>phoxia-tools</strong>: ferramentas para desenvolvedores, chegando em breve.</li>
-          <li><strong>phoxia-id</strong>: autenticação com passkeys, PKCE e JWT RS256. A base de identidade de todo o ecossistema.</li>
-          <li><strong>phoxia-watch</strong>: monitoramento de saúde e uptime, com alertas e histórico.</li>
+          <li>
+            <strong>phoxia-tools</strong>: ferramentas para desenvolvedores, chegando em breve.
+          </li>
+          <li>
+            <strong>phoxia-id</strong>: autenticação com passkeys, PKCE e JWT RS256. A base de
+            identidade de todo o ecossistema.
+          </li>
+          <li>
+            <strong>phoxia-watch</strong>: monitoramento de saúde e uptime, com alertas e histórico.
+          </li>
         </ul>
 
         <p>
-          Tudo AGPLv3. Tudo auditável. O código de qualquer projeto que publiquemos
-          é público por padrão. Não existe versão "enterprise fechada" aqui.
+          Tudo AGPLv3. Tudo auditável. O código de qualquer projeto que publiquemos é público por
+          padrão. Não existe versão "enterprise fechada" aqui.
         </p>
 
         <h2>Transparência de verdade</h2>
 
         <p>
-          A <a href="/transparency">página de transparência</a> existe mas ainda não tem números reais.
-          Ela vai ter quando houver receita real para reportar.
-          Prefiro um <code>—</code> honesto a um número fabricado.
+          A <a href="/transparency">página de transparência</a> existe mas ainda não tem números
+          reais. Ela vai ter quando houver receita real para reportar. Prefiro um <code>—</code> honesto
+          a um número fabricado.
         </p>
 
         <h2>O que vem a seguir</h2>
 
         <p>
-          Mais projetos vão ser revelados conforme ficam prontos. O plano é construir
-          ferramentas úteis para desenvolvedores e para o público em geral,
-          sempre com o código aberto e as contas abertas.
+          Mais projetos vão ser revelados conforme ficam prontos. O plano é construir ferramentas
+          úteis para desenvolvedores e para o público em geral, sempre com o código aberto e as
+          contas abertas.
         </p>
 
         <p>
           Se quiser acompanhar de perto, o
           <a href="https://github.com/phoxia" target="_blank" rel="noopener noreferrer">GitHub</a>
-          é o melhor lugar.
-          Se quiser conversar, a comunidade no
-          <a href="https://discord.gg/HD2p367Zb5" target="_blank" rel="noopener noreferrer">Discord</a>
+          é o melhor lugar. Se quiser conversar, a comunidade no
+          <a href="https://discord.gg/HD2p367Zb5" target="_blank" rel="noopener noreferrer"
+            >Discord</a
+          >
           está aberta.
         </p>
 
         <p class="sign-off">- Dev Luch</p>
-
       {:else}
-
         <p>Today, <strong>phoxia.org</strong> is live.</p>
 
         <p>
-          There isn't much to say beyond that, but there's plenty to show.
-          Phoxia exists because I believe software can be built differently:
-          open by default, transparent in decisions, sustainable over the long run.
-          Not as a landing page slogan, but as real practice.
+          There isn't much to say beyond that, but there's plenty to show. Phoxia exists because I
+          believe software can be built differently: open by default, transparent in decisions,
+          sustainable over the long run. Not as a landing page slogan, but as real practice.
         </p>
 
         <h2>What's being built</h2>
@@ -145,49 +148,53 @@
 
         <ul>
           <li><strong>phoxia-tools</strong>: developer tools, launching soon.</li>
-          <li><strong>phoxia-id</strong>: passkey-first auth with PKCE and JWT RS256. The identity layer for the whole ecosystem.</li>
-          <li><strong>phoxia-watch</strong>: health checks and uptime monitoring, with alerts and history.</li>
+          <li>
+            <strong>phoxia-id</strong>: passkey-first auth with PKCE and JWT RS256. The identity
+            layer for the whole ecosystem.
+          </li>
+          <li>
+            <strong>phoxia-watch</strong>: health checks and uptime monitoring, with alerts and
+            history.
+          </li>
         </ul>
 
         <p>
-          Everything AGPLv3. Everything auditable. Any project we publish is
-          public by default. There's no "closed enterprise edition" here.
+          Everything AGPLv3. Everything auditable. Any project we publish is public by default.
+          There's no "closed enterprise edition" here.
         </p>
 
         <h2>Real transparency</h2>
 
         <p>
-          The <a href="/transparency">transparency page</a> exists but has no real numbers yet.
-          It will, once there's real revenue to report.
-          I'd rather show an honest <code>—</code> than a fabricated number.
+          The <a href="/transparency">transparency page</a> exists but has no real numbers yet. It
+          will, once there's real revenue to report. I'd rather show an honest <code>—</code> than a
+          fabricated number.
         </p>
 
         <h2>What comes next</h2>
 
         <p>
-          More projects will be revealed as they get ready. The plan is to build
-          useful tools for developers and general audiences alike,
-          always with the code open and the books open.
+          More projects will be revealed as they get ready. The plan is to build useful tools for
+          developers and general audiences alike, always with the code open and the books open.
         </p>
 
         <p>
           If you want to follow along,
           <a href="https://github.com/phoxia" target="_blank" rel="noopener noreferrer">GitHub</a>
-          is the best place.
-          If you want to talk, the
-          <a href="https://discord.gg/HD2p367Zb5" target="_blank" rel="noopener noreferrer">Discord community</a>
+          is the best place. If you want to talk, the
+          <a href="https://discord.gg/HD2p367Zb5" target="_blank" rel="noopener noreferrer"
+            >Discord community</a
+          >
           is open.
         </p>
 
         <p class="sign-off">- Dev Luch</p>
-
       {/if}
     </div>
 
     <footer class="post-footer">
       <a href="/blog" class="back-link">{locale.blog.backToBlog}</a>
     </footer>
-
   </article>
 </main>
 
@@ -211,7 +218,9 @@
     transition: color 0.15s;
   }
 
-  .back-link:hover { color: var(--color-text-muted); }
+  .back-link:hover {
+    color: var(--color-text-muted);
+  }
 
   .post-title {
     font-family: var(--font-heading);
@@ -286,7 +295,9 @@
     transition: opacity 0.15s;
   }
 
-  .post-body :global(a:hover) { opacity: 0.8; }
+  .post-body :global(a:hover) {
+    opacity: 0.8;
+  }
 
   .post-body :global(code) {
     font-family: var(--font-mono);

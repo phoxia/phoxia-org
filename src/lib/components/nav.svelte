@@ -15,13 +15,15 @@
     cycleLang();
   }
 
-  const ModeIcon = $derived(
-    modePref === "dark" ? Sun : modePref === "light" ? Moon : Monitor
-  );
+  const ModeIcon = $derived(modePref === "dark" ? Sun : modePref === "light" ? Moon : Monitor);
 
   let locale = $derived(t());
   let modeLabel = $derived(
-    modePref === "dark" ? locale.common.dark : modePref === "light" ? locale.common.light : locale.common.system
+    modePref === "dark"
+      ? locale.common.dark
+      : modePref === "light"
+        ? locale.common.light
+        : locale.common.system
   );
 
   let menuOpen = $state(false);
@@ -90,7 +92,9 @@
       <ul role="list">
         <li><a href="/projects" onclick={() => (menuOpen = false)}>{locale.nav.projects}</a></li>
         <li><a href="/blog" onclick={() => (menuOpen = false)}>{locale.nav.blog}</a></li>
-        <li><a href="/transparency" onclick={() => (menuOpen = false)}>{locale.nav.transparency}</a></li>
+        <li>
+          <a href="/transparency" onclick={() => (menuOpen = false)}>{locale.nav.transparency}</a>
+        </li>
       </ul>
     </div>
   {/if}
@@ -180,7 +184,9 @@
     text-decoration: none;
     padding: 0.4rem 0.75rem;
     border-radius: var(--radius-sm);
-    transition: color 0.15s, background 0.15s;
+    transition:
+      color 0.15s,
+      background 0.15s;
     min-height: unset;
     display: block;
   }
@@ -210,7 +216,9 @@
     font-family: var(--font-mono);
     font-size: 0.75rem;
     min-height: 32px;
-    transition: border-color 0.15s, color 0.15s;
+    transition:
+      border-color 0.15s,
+      color 0.15s;
   }
 
   .ctrl-btn:hover {
@@ -255,12 +263,22 @@
     left: 0;
   }
 
-  .hamburger::before { top: -6px; }
-  .hamburger::after { top: 6px; }
+  .hamburger::before {
+    top: -6px;
+  }
+  .hamburger::after {
+    top: 6px;
+  }
 
-  .hamburger.open { background: transparent; }
-  .hamburger.open::before { transform: rotate(45deg) translate(4px, 4px); }
-  .hamburger.open::after { transform: rotate(-45deg) translate(4px, -4px); }
+  .hamburger.open {
+    background: transparent;
+  }
+  .hamburger.open::before {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  .hamburger.open::after {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
 
   .mobile-menu {
     border-top: 1px solid var(--color-border);
@@ -297,7 +315,11 @@
   }
 
   @media (max-width: 640px) {
-    .nav-links { display: none; }
-    .mobile-menu-btn { display: inline-flex; }
+    .nav-links {
+      display: none;
+    }
+    .mobile-menu-btn {
+      display: inline-flex;
+    }
   }
 </style>
