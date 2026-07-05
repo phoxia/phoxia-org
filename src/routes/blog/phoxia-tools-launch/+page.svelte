@@ -11,7 +11,7 @@
 
   const meta = {
     slug: "phoxia-tools-launch",
-    date: "2026-07-01",
+    date: "2026-07-02",
     author: "Dev Luch",
     title: {
       en: "Phoxia Tools is live",
@@ -31,8 +31,8 @@
 <Seo
   title={isPT ? meta.title.pt : meta.title.en}
   description={isPT
-    ? "Phoxia Tools está no ar em tools.phoxia.org. 19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
-    : "Phoxia Tools is live at tools.phoxia.org. 19 free developer tools that run entirely in your browser, no data sent anywhere."}
+    ? "Phoxia Tools está no ar em tools.phoxia.org. 18 ferramentas gratuitas para desenvolvedores que rodam inteiramente no seu navegador, sem enviar nenhum dado a lugar algum."
+    : "Phoxia Tools is live at tools.phoxia.org. 18 free developer tools that run entirely in your browser, no data sent anywhere."}
   path="/blog/phoxia-tools-launch"
   type="article"
 />
@@ -60,7 +60,7 @@
           <a href="https://tools.phoxia.org" target="_blank" rel="noopener noreferrer"
             >tools.phoxia.org</a
           >
-          está no ar. 19 ferramentas para desenvolvedores, todas rodando inteiramente no seu navegador.
+          está no ar. 18 ferramentas para desenvolvedores, todas rodando inteiramente no seu navegador.
         </p>
 
         <h2>Sem servidor, sem logs</h2>
@@ -82,44 +82,47 @@
 
         <p>
           A categoria principal cobre o que você abre uma aba no navegador para fazer: formatar e
-          validar JSON, decodificar JWTs, gerar hashes (MD5, SHA-1, SHA-256, SHA-512), gerar UUIDs
-          v4, criar senhas configuráveis, testar expressões regulares, parsear comandos cURL,
-          descrever expressões cron em linguagem natural, converter timestamps Unix e comparar dois
-          textos lado a lado. Tudo o que você normalmente colaria num site aleatório.
+          validar JSON, decodificar JWTs, gerar hashes (SHA-256, SHA-512, SHA-1), gerar UUIDs
+          v4, criar senhas configuráveis com medidor de entropia, testar expressões regulares,
+          parsear comandos cURL, trabalhar com datas (timestamps Unix, expressões cron, cálculo de
+          diferença entre datas, contagem regressiva), comparar dois textos lado a lado, e
+          criptografar texto com AES-256-GCM direto no navegador.
         </p>
 
-        <h2>Manipulação de texto</h2>
+        <h2>Encoding e texto</h2>
 
         <p>
-          Encode e decode de Base64, encode e decode de URL, conversão entre formatos de
-          nomenclatura (camelCase, snake_case, kebab-case, PascalCase e outros), geração de slugs e
-          preview de Markdown. Pequenos utilitários que aparecem várias vezes por dia.
+          Um toolbox unificado de encoding cobre Base64, URL, binário, código morse e hexadecimal,
+          cada um com encode e decode. Um toolbox de texto agrupa conversão de case (camelCase,
+          snake_case, kebab-case, PascalCase e mais), geração de slugs, contador de caracteres e
+          palavras, inversão de texto, ordenação alfabética, remoção de linhas duplicadas, busca e
+          substituição, e adição de prefixo/sufixo. Preview de Markdown completa o conjunto.
+        </p>
+
+        <h2>Aleatório e utilitários</h2>
+
+        <p>
+          Sorteador de lista, embaralhador, gerador de números aleatórios e dados de RPG (d4 a
+          d100). Gerador de lorem ipsum configurável (parágrafos, frases ou palavras). Gerador de
+          dados fictícios com suporte a 15 países, incluindo CPF, CNPJ, SSN, NINO, NIF e outros
+          documentos locais.
         </p>
 
         <h2>Referência</h2>
 
         <p>
-          Tabela completa de códigos de status HTTP com descrições e visualizador de specs
-          OpenAPI/Swagger. Para quando você precisa checar algo sem sair do fluxo de trabalho.
+          Tabela completa de códigos de status HTTP com descrições em português e inglês, e
+          visualizador de specs OpenAPI/Swagger. Para quando você precisa checar algo sem sair do
+          fluxo de trabalho.
         </p>
 
-        <h2>Para devs brasileiros</h2>
+        <h2>O que vem depois</h2>
 
         <p>
-          A maioria das coleções de ferramentas para desenvolvedores ignora completamente quem
-          programa em português. Aqui tem três utilitários que não aparecem em quase nenhum toolkit
-          internacional: validador e gerador de CPF, validador e gerador de CNPJ, e um gerador de
-          dados falsos brasileiros realistas (nomes, endereços, telefones, e-mails no formato
-          certo). Essas três ferramentas são pt-BR primeiro.
-        </p>
-
-        <h2>O que vem a seguir</h2>
-
-        <p>
-          Esta é a v1. Mais ferramentas estão planejadas, e algumas futuras podem precisar de um
-          servidor para funcionar. Quando isso acontecer, será dito claramente. A direção é integrar
-          as ferramentas de forma mais natural ao fluxo de trabalho do desenvolvedor, não apenas
-          oferecer mais uma coleção de abas para abrir.
+          Esta é a v2, com ferramentas consolidadas em toolboxes multi-funcionais (texto, encoding,
+          data/hora, aleatório) e novas adições como cifra AES-256-GCM e lorem ipsum. Mais
+          ferramentas virão, e algumas futuras podem precisar de um servidor para funcionar. Quando
+          isso acontecer, será dito claramente.
         </p>
 
         <p>
@@ -138,7 +141,7 @@
           <a href="https://tools.phoxia.org" target="_blank" rel="noopener noreferrer"
             >tools.phoxia.org</a
           >
-          is live. 19 developer tools, all running entirely in your browser.
+          is live. 18 developer tools, all running entirely in your browser.
         </p>
 
         <h2>No server, no logs</h2>
@@ -160,44 +163,46 @@
 
         <p>
           The main category covers what you open a browser tab to do: format and validate JSON,
-          decode JWTs, generate hashes (MD5, SHA-1, SHA-256, SHA-512), generate UUID v4, create
-          configurable passwords, test regular expressions, parse cURL commands, describe cron
-          expressions in plain English, convert Unix timestamps, and compare two texts side by side.
-          Everything you would otherwise paste into some random site.
+          decode JWTs, generate hashes (SHA-256, SHA-512, SHA-1), generate UUID v4, create
+          configurable passwords with entropy meter, test regular expressions, parse cURL commands,
+          work with dates (Unix timestamps, cron expressions, date difference, countdown timer),
+          compare two texts side by side, and encrypt text with AES-256-GCM right in the browser.
         </p>
 
-        <h2>Text utilities</h2>
+        <h2>Encoding and text</h2>
 
         <p>
-          Base64 encode/decode, URL encode/decode, case conversion (camelCase, snake_case,
-          kebab-case, PascalCase, and more), slug generation, and Markdown preview. Small utilities
-          that come up multiple times a day.
+          A unified encoding toolbox covers Base64, URL, binary, Morse code, and hexadecimal, each
+          with encode and decode. A text toolbox groups case conversion (camelCase, snake_case,
+          kebab-case, PascalCase, and more), slug generation, character and word counter, text
+          reversal, alphabetical sorting, duplicate line removal, find and replace, and
+          prefix/suffix. Markdown preview rounds out the set.
+        </p>
+
+        <h2>Random and utilities</h2>
+
+        <p>
+          List picker, shuffle, random number generator, and RPG dice (d4 through d100).
+          Configurable lorem ipsum generator (paragraphs, sentences, or words). Fake data generator
+          supporting 15 countries, including CPF, CNPJ, SSN, NINO, NIF, and other local document
+          formats.
         </p>
 
         <h2>Reference</h2>
 
         <p>
-          A full HTTP status code table with descriptions and an OpenAPI/Swagger spec viewer. For
-          when you need to look something up without breaking your flow.
-        </p>
-
-        <h2>For Brazilian devs</h2>
-
-        <p>
-          Most developer tool collections completely ignore Portuguese-speaking developers. Here are
-          three utilities that show up in almost no international toolkit: a CPF validator and
-          generator, a CNPJ validator and generator, and a Brazilian fake data generator with
-          realistic names, addresses, phone numbers, and properly formatted emails. These three
-          tools are pt-BR first.
+          A full HTTP status code table with descriptions in both English and Portuguese, and an
+          OpenAPI/Swagger spec viewer. For when you need to look something up without breaking your
+          flow.
         </p>
 
         <h2>What comes next</h2>
 
         <p>
-          This is v1. More tools are planned, and some future ones may require a server to work.
-          When that happens, it will be stated clearly. The direction is to make the tools fit more
-          naturally into a developer's daily workflow, not just offer another collection of tabs to
-          open.
+          This is v2, with tools consolidated into multi-function toolboxes (text, encoding,
+          date/time, random) and new additions like AES-256-GCM cipher and lorem ipsum. More tools
+          are planned, and some future ones may require a server to work. When that happens, it will
+          be stated clearly.
         </p>
 
         <p>

@@ -53,7 +53,7 @@ const ptBR: LocaleShape = {
     },
     tools: {
       name: "Tools",
-      desc: "19 ferramentas gratuitas para desenvolvedores que rodam inteiramente no navegador. JSON, JWT, hash, regex, cURL e mais. Nenhum dado sai da sua máquina.",
+      desc: "18 ferramentas gratuitas para desenvolvedores que rodam inteiramente no navegador. JSON, JWT, hash, regex, cURL e mais. Nenhum dado sai da sua máquina.",
     },
     bounty: {
       name: "Bounty",

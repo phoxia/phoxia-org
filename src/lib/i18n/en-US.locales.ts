@@ -53,7 +53,7 @@ const en: LocaleShape = {
     },
     tools: {
       name: "Tools",
-      desc: "19 free developer tools that run entirely in your browser. JSON, JWT, hash, regex, cURL, and more. No data leaves your machine.",
+      desc: "18 free developer tools that run entirely in your browser. JSON, JWT, hash, regex, cURL, and more. No data leaves your machine.",
     },
     bounty: {
       name: "Bounty",
