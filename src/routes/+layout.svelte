@@ -2,6 +2,7 @@
   import "../app.css";
   import { initTheme } from "$lib/theme/theme.svelte";
   import { getLang, initClientLang } from "$lib/i18n/i18n.svelte";
+  import { phoxiaManifest } from "@phoxia/lux";
 
   let { children } = $props();
 
@@ -16,6 +17,9 @@
 </script>
 
 <svelte:head>
+  <link rel="icon" href={phoxiaManifest.favicon.href} />
+  <link rel="manifest" href={phoxiaManifest.manifest.href} />
+  <link rel="apple-touch-icon" href={phoxiaManifest.appleTouchIcon.href} />
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"Phoxia","url":"https://phoxia.org","logo":"https://phoxia.org/brand/symbol.png"}
   </script>

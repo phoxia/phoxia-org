@@ -5,3 +5,5 @@ target/
 node_modules/
 .svelte-kit/
 build/
+.phoxia/*.local.*
+.claude/settings.local.json
