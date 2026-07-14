@@ -11,5 +11,5 @@ Date: 2026-07-14. Confidence: high for static source and build output.
 
 ## Remaining evidence
 
-- Root license, security policy and contribution policy require owner approval.
+- The root uses AGPL-3.0-only and includes security and contribution policies approved by the owner.
 - Deployment headers, domain configuration and live analytics behavior were not inspected.
