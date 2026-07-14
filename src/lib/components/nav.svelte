@@ -1,19 +1,30 @@
 <script lang="ts">
-  import { Sun, Moon, Monitor, Languages } from "$lib/icons";
-  import { t, cycleLang, getLang } from "$lib/i18n/i18n.svelte";
-  import { cycleMode, getModePref } from "$lib/theme/theme.svelte";
+  import { Sun, Moon, Monitor } from "$lib/icons";
+  import Globe from "lucide-svelte/icons/globe";
+  import { t, getLang, setLang } from "$lib/i18n/i18n.svelte";
+  import { getModePref, setModePref } from "$lib/theme/theme.svelte";
+  import { onMount } from "svelte";
 
-  let modePref = $state(getModePref());
+  let modePref = $derived(getModePref());
   let lang = $derived(getLang());
+  let themeOpen = $state(false);
+  let langOpen = $state(false);
+  let menuOpen = $state(false);
 
-  function handleMode() {
-    cycleMode();
-    modePref = getModePref();
-  }
-
-  function handleLang() {
-    cycleLang();
-  }
+  onMount(() => {
+    function closeMenus(e: MouseEvent) {
+      if (!(e.target as HTMLElement)?.closest(".menu")) { themeOpen = false; langOpen = false; }
+    }
+    function onKeydown(e: KeyboardEvent) {
+      if (e.key === "Escape") { themeOpen = false; langOpen = false; }
+    }
+    document.addEventListener("click", closeMenus);
+    document.addEventListener("keydown", onKeydown);
+    return () => {
+      document.removeEventListener("click", closeMenus);
+      document.removeEventListener("keydown", onKeydown);
+    };
+  });
 
   const ModeIcon = $derived(modePref === "dark" ? Sun : modePref === "light" ? Moon : Monitor);
 
@@ -25,8 +36,6 @@
         ? locale.common.light
         : locale.common.system
   );
-
-  let menuOpen = $state(false);
 </script>
 
 <a href="#main-content" class="skip-link">{locale.nav.skipToContent}</a>
@@ -55,24 +64,43 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button
-        onclick={handleLang}
-        aria-label="{locale.common.toggleLang} ({lang === 'en' ? 'PT-BR' : 'EN'})"
-        class="ctrl-btn"
-        title={locale.common.toggleLang}
-      >
-        <Languages size={15} aria-hidden="true" />
-        <span class="ctrl-label">{lang === "en" ? "PT" : "EN"}</span>
-      </button>
+      <div class="menu">
+        <button
+          aria-label={`${locale.common.toggleLang} (${lang === "en" ? "PT-BR" : "EN"})`}
+          aria-expanded={langOpen}
+          class="ctrl-btn"
+          title={locale.common.toggleLang}
+          onclick={() => { langOpen = !langOpen; themeOpen = false; }}
+        >
+          <Globe size={15} aria-hidden="true" />
+          <span class="ctrl-label">{lang === "en" ? "PT" : "EN"}</span>
+        </button>
+        {#if langOpen}
+          <div class="dropdown">
+            <button aria-pressed={lang === "en"} onclick={() => { setLang("en"); langOpen = false; }}>English</button>
+            <button aria-pressed={lang === "pt-BR"} onclick={() => { setLang("pt-BR"); langOpen = false; }}>Português</button>
+          </div>
+        {/if}
+      </div>
 
-      <button
-        onclick={handleMode}
-        aria-label="{locale.common.toggleTheme} ({modeLabel})"
-        class="ctrl-btn"
-        title="{locale.common.toggleTheme}: {modeLabel}"
-      >
-        <ModeIcon size={15} aria-hidden="true" />
-      </button>
+      <div class="menu">
+        <button
+          aria-label="{locale.common.toggleTheme} ({modeLabel})"
+          aria-expanded={themeOpen}
+          class="ctrl-btn"
+          title="{locale.common.toggleTheme}: {modeLabel}"
+          onclick={() => { themeOpen = !themeOpen; langOpen = false; }}
+        >
+          <ModeIcon size={15} aria-hidden="true" />
+        </button>
+        {#if themeOpen}
+          <div class="dropdown">
+            <button aria-pressed={modePref === "system"} onclick={() => { setModePref("system"); themeOpen = false; }}><Monitor size={15} aria-hidden="true" />{locale.common.system}</button>
+            <button aria-pressed={modePref === "light"} onclick={() => { setModePref("light"); themeOpen = false; }}><Sun size={15} aria-hidden="true" />{locale.common.light}</button>
+            <button aria-pressed={modePref === "dark"} onclick={() => { setModePref("dark"); themeOpen = false; }}><Moon size={15} aria-hidden="true" />{locale.common.dark}</button>
+          </div>
+        {/if}
+      </div>
 
       <!-- Mobile menu toggle -->
       <button
@@ -229,6 +257,38 @@
   .ctrl-label {
     line-height: 1;
   }
+
+  .menu { position: relative; }
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    display: grid;
+    min-width: 130px;
+    padding: 6px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+  }
+  .dropdown button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    min-height: 36px;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    cursor: pointer;
+  }
+  .dropdown button:hover { background: var(--color-surface-raised); }
+  .dropdown button[aria-pressed="true"] { background: var(--color-surface-raised); }
 
   /* Mobile menu button */
   .mobile-menu-btn {
